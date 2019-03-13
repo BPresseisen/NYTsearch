@@ -1,3 +1,14 @@
+
+//$(.toparticles).append(a)
+
+window.onload = function() {
+
+    $("#search").on("click", searchReturn);
+
+};
+
+function searchReturn(){
+
 // console.log($("#searchTerm").attr("data-name",value));
 // var keyword = $("#searchTerm").attr("data-name");
 
@@ -14,18 +25,7 @@ console.log(end_year);
 
 var keyword = $("#searchTerm").val();
 
-console.log(keyword);
-
-
-//$(.toparticles).append(a)
-
-window.onload = function() {
-
-    $("#search").on("click", searchReturn);
-
-};
-
-function searchReturn(){
+console.log(keyword);       
 
 // filled-in
 if(start_year !=="" && end_year!== ""){
@@ -48,7 +48,7 @@ if(start_year !=="" && end_year!== ""){
 
 };
 
-console.log(search);
+console.log("the search is: " + search);
 
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + "&api-key=VURgVKuQgwADx2mopxHCsDdh2gSCcuVs";
 
@@ -60,18 +60,20 @@ $.ajax({
 
     console.log(response);
 
-    for (i=0;i<response.length;i++){
+    // console.log("there are this many articles: " + response.docs);
+    console.log("there are this many articles: " + response.response.docs.length);
 
-        var resultNum=response[i];
-        var author = response[i].byline.original;
-        var headline = response[i].headline;
-        var url = response[i].web_url;
+    for (i=0;i<response.response.docs.length;i++){
+
+        var resultNum=response.response.docs[i];  
+        var author = response.response.docs[i].byline.original;
+        var headline = response.response.docs[i].headline;
+        var url = response.response.docs[i].web_url;
     
         var results = $("<results>").append("<p>headline</p>");
         $("#articles").append(results);
     };
 
 });
-
 
 };
