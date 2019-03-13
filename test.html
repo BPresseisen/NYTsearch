@@ -1,0 +1,83 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NY Times Searcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12 text-center">
+        <div class="jumbotron bg-dark text-light">
+          <h1 class="display-4"><span class="far fa-newspaper"></span> NY Times Search</h1>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading bg-dark text-light pl-3"><span class="far fa-newspaper"></span> Search Parameters</div>
+          
+          <form class="border border-dark p-3">
+            <div class="form-group searchTerm">
+              <label for="exampleFormControlInput1"><strong>Search Term:</strong></label>
+              <input type="text" class="form-control" id="searchTerm">
+            </div>
+            <div class="form-group numOfRecords">
+              <label for="exampleFormControlSelect1"><strong>Number of Records to
+                  Retrieve</strong></label>
+              <select class="form-control" id="numOfRecords">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+            </div>
+            <div class="form-group startYear">
+              <label for="exampleFormControlTextarea1"><strong>Start Year (Optional)</strong></label>
+              <input class="form-control" id="startYear"> </input>
+            </div>
+            <div class="form-group endYear">
+              <label for="exampleFormControlTextarea1"><strong>End Year (Optional)</strong></label>
+              <input class="form-control" id="endYear"></input>
+            </div>
+            <div class="row p-3">
+              <button type="button" class="btn btn-secondary m-1" id="search"> <span class="fas fa-search"></span>
+                Search</button>
+              <button type="button" class="btn btn-secondary m-1" id="clear"><span class="fas fa-snowplow"></span> Clear Result</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default border border-dark">
+          <div class="panel-heading bg-dark text-light pl-3"><span class="far fa-newspaper"></span> Top Articles</div>
+          <div class="panel-body p-3" id ="articles">test</div>
+        </div>
+      </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+
+      <script src="./nyt.js"> </script>
+</body>
+</html>
