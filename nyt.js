@@ -67,10 +67,11 @@ $.ajax({
 
         var resultNum=response.response.docs[i];  
         var author = response.response.docs[i].byline.original;
-        var headline = response.response.docs[i].headline;
+        var headline = response.response.docs[i].headline.main;
         var url = response.response.docs[i].web_url;
     
-        var results = $("<results>").append("<p>headline</p>");
+        var results = $("<results>").append("<p>" + headline + "</p>");
+        
         $("#articles").append(results);
     };
 
